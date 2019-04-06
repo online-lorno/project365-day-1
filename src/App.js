@@ -115,6 +115,8 @@ class App extends Component {
 					</button>
 				</div>
 
+				{dataColumns.length === 0 && <div className="spacer" />}
+
 				<Footer />
 			</div>
 		);
