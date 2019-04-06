@@ -30,7 +30,7 @@ class App extends Component {
 		// Get quote from API
 		if (!quote || (lastQuoteTime && moment().diff(lastQuoteTime, 'seconds') > quoteTimeout)) {
 			axios
-				.get('http://quotes.rest/qod.json')
+				.get('https://quotes.rest/qod.json')
 				.then(response => {
 					const {
 						data: {
