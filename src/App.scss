@@ -1,0 +1,111 @@
+$enable-responsive-font-sizes: true;
+$primary-color: #111;
+$seconday-color: #555;
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+html,
+body {
+	font-family: 'Palanquin', sans-serif;
+	font-weight: 200;
+	color: $seconday-color;
+	background-color: #f5f5f5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	color: $primary-color;
+
+	& > .regular {
+		font-weight: 400;
+	}
+}
+
+.header {
+	margin: 5rem 0 8rem;
+}
+
+.footer {
+	margin-top: 10rem;
+	padding-bottom: 2rem;
+}
+
+.btn-loading {
+	padding: 1rem 3rem;
+	min-width: 250px;
+	border-radius: 2rem;
+}
+
+.card-columns {
+	@include media-breakpoint-only(sm) {
+		column-count: 1;
+	}
+	@include media-breakpoint-only(md) {
+		column-count: 2;
+	}
+	@include media-breakpoint-only(lg) {
+		column-count: 2;
+	}
+	@include media-breakpoint-only(xl) {
+		column-count: 2;
+	}
+
+	.card {
+		border: none;
+		border-radius: 0;
+		overflow: hidden;
+
+		.card-img-top {
+			border: none;
+			border-radius: 0;
+			min-height: 200px;
+
+			img {
+				width: 100%;
+				vertical-align: middle;
+				opacity: 0;
+				transition: opacity 0.6s ease;
+				transition-delay: 0.8s;
+			}
+
+			&.loaded img {
+				opacity: 1;
+			}
+		}
+
+		.card-body {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+
+			.card-title {
+				color: #ddd;
+				margin-bottom: 0;
+
+				a:link,
+				a:visited,
+				a:active {
+					color: #fff;
+					text-decoration: underline;
+				}
+
+				a:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

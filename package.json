@@ -1,0 +1,51 @@
+{
+	"name": "ol-project365-day-1",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "react-scripts start",
+		"start": "serve -s build",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"heroku-postbuild": "npm run build",
+		"commit": "npx pretty-quick --staged && git cz"
+	},
+	"dependencies": {
+		"axios": "^0.18.0",
+		"bootstrap": "^4.3.1",
+		"classnames": "^2.2.6",
+		"moment": "^2.24.0",
+		"node-sass": "^4.11.0",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-reveal": "^1.2.2",
+		"react-scripts": "2.1.8",
+		"serve": "^11.0.0",
+		"webfontloader": "^1.6.28"
+	},
+	"devDependencies": {
+		"commitizen": "^3.0.7",
+		"cz-conventional-changelog": "^2.1.0",
+		"husky": "^1.3.1",
+		"prettier": "^1.16.4",
+		"pretty-quick": "^1.10.0"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
+	"engines": {
+		"node": "10.x"
+	}
+}
